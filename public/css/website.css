@@ -18,6 +18,55 @@ p{
     /* border:5px solid pink; 
 }*/
 
+.parallax {
+    height: 100vh;
+    width:100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 2px;
+    perspective: 2px;
+    /* border:5px solid orange; */
+    z-index:1000;
+    /* background-image: url(../img/brandimage/brandimage_c_t.jpg);
+    background-size:cover; */
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:2000;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0px);
+    transform: translateZ(0px);
+    /* background-image: url(../img/brandimage/brandimage_c_t.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;  */
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-1px) scale(1.5);
+    transform: translateZ(-1px) scale(1.5);
+    background-image: url(../img/brandimage/brandimage_c_t.jpg);
+    background-repeat: no-repeat;
+    /* background-size: cover;  */
+    width:100vw;
+}
+
+.parallax {
+    /* font-size: 200%;*/
+} 
+/* add some padding to force scrollbars */
+
+.parallax__layer {
+    padding: 75vh 0;
+}
+/* centre the content in the parallax layers */
+
 #nav {
     background: #B39559;
     width: 100vw;
@@ -72,13 +121,29 @@ p{
     padding-right:30px;
 }
 
-#fixedIcons{
+/* #fixedIcons {
+    display:none; 
+} */
+
+/* #fixedIcons{
     position: fixed;
     top:80vh;
     right:20px;
     padding:0 20px;
-    /*border:1px solid red;
-    z-index: 999;*/
+    z-index:999;
+} */
+
+#fixedIcons{
+    display:none;
+}
+
+#fixedIcons.show{
+    display:block;
+    position: fixed;
+    top:80vh;
+    right:20px;
+    padding:0 20px;
+    z-index:999;
 }
 
 #fixedIcons>div{
@@ -123,7 +188,7 @@ p{
 .introTxt{
     padding:20px;
     padding-left:50px;
-    margin-top:60vh;
+    /* margin-top:60vh; */
     /* border:2px solid yellow; */
 }
 
@@ -182,9 +247,10 @@ p{
     /* margin-left:60vw;
     width:500px;
     margin-top:-150px; 
-    border:1px solid red;*/
-    margin-top:75vh;
+    border:1px solid red;
+    margin-top:75vh;*/
     padding:20px;
+    /* border:1px solid red; */
 }
 
 #iconGroup img{
@@ -301,7 +367,7 @@ p{
     100% { transform: scale(1.2);}
 }
 
-#f1 .fImg img,
+/* #f1 .fImg img,
 #f3 .fImg img{
     -webkit-animation: turnLeft 3s linear;
     animation: turnLeft 3s linear;
@@ -309,6 +375,64 @@ p{
 
 #f2 .fImg img,
 #f4 .fImg img {
+    -webkit-animation: turnRight 3s linear;
+    animation: turnRight 3s linear;
+} */
+
+/* #f1.in-view .fIcon,
+#f2.in-view .fIcon,
+#f3.in-view .fIcon,
+#f4.in-view .fIcon{
+    -webkit-animation: fadeinLittle 2s linear;
+    animation: fadeinLittle 2s linear;
+} */
+
+#f5.in-view .icons#fi1,
+#f6.in-view .icons#fi8{
+    -webkit-animation: fadeinLittle 0.5s linear;
+    animation: fadeinLittle 0.5s linear;
+}
+
+#f5.in-view .icons#fi2,
+#f6.in-view .icons#fi7{
+    -webkit-animation: fadeinLittle 1s linear;
+    animation: fadeinLittle 1s linear;
+}
+
+#f5.in-view .icons#fi3,
+#f6.in-view .icons#fi6{
+    -webkit-animation: fadeinLittle 1.5s linear;
+    animation: fadeinLittle 1.5s linear;
+}
+
+#f5.in-view .icons#fi4,
+#f6.in-view .icons#fi5{
+    -webkit-animation: fadeinLittle 2s linear;
+    animation: fadeinLittle 2s linear;
+}
+
+@-webkit-keyframes fadeinLittle {
+    0%{ opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+/* #f1.in-view img,
+#f3.in-view img{
+    opacity: 1;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+    -webkit-animation: turnLeft 2s linear;
+    animation: turnLeft 2s linear;
+} */
+
+#f1.in-view .fImg,
+#f3.in-view .fImg{
+    -webkit-animation: turnLeft 3s linear;
+    animation: turnLeft 3s linear;
+}
+
+#f2.in-view .fImg,
+#f4.in-view .fImg{
     -webkit-animation: turnRight 3s linear;
     animation: turnRight 3s linear;
 }
@@ -335,8 +459,10 @@ p{
 
 #compare{
     content:'';
-    /*background-image: url('../img/bg/bg_compare.jpg');*/
-    background-size:100%;
+    /*background-image: url('../img/bg/bg_compare.jpg');
+    background-size:100%;*/
+    height:700px;
+    border:1px solid red;
 }
 
 #compare{
@@ -344,9 +470,20 @@ p{
     padding-bottom:120px;
 }
 
-#compare table {
-    width:80vw;
-    margin:0 auto;
+/* #compare table {
+    width:100%;
+    margin:0 auto; 
+    display:block;
+    overflow:hidden;
+    border:1px solid pink;
+} */
+
+#compare #collapseTable {
+    width:100%;
+    margin:0 auto; 
+    display:block;
+    overflow:hidden;
+    border:1px solid pink;
 }
 
 #compare th:first-child{
@@ -361,6 +498,11 @@ p{
 #compare th:nth-child(4){
     width:22.5%;
 }
+
+/* #compare th:nth-child(3),
+#compare th:nth-child(4){
+    width:200px;
+} */
 
 #compare th, td {
     /* border-bottom: 1px solid #5A4A2C; */
@@ -423,6 +565,31 @@ p{
 
 #compare tbody tr:last-child span{
     border-bottom:1px solid transparent;
+}
+
+ /* #compare table {
+    height: 10%;
+    transition: height 2s ease-in;
+} */
+
+#compare table {
+    width:100%;
+}
+
+#compare #collapseTable {
+    height: 10%;
+    transition: height 2s ease-in;
+    border:1px solid pink;
+    width:80vw;
+    margin:0 auto;
+}
+  
+/* #compare table.in-view  {
+    height:100%;
+} */
+
+#compare #collapseTable.in-view  {
+    height:100%;
 }
 
 #wood {
@@ -515,9 +682,15 @@ p{
     margin-left:25vw;
 }
 
+#spec #size img.in-view{
+    -webkit-animation: turnLeft 2s linear;
+    animation: turnLeft 2s linear;
+}
+
 #spec #structure img{
     width:40vw;
     margin-bottom:30px;
+    border:1px solid blue;
 }
 
 #spec .subIntro, 
@@ -530,13 +703,27 @@ p{
 #structure {
     display: flex;
     flex-flow: row nowrap;
-    justify-content:space-between;
-    align-items: center;
+    justify-content:flex-start;
+    align-items:flex-start;
 }
 
 #spec #structure #strutureImg,
 #spec #structure #strutureIntro{
-    width:50vw;
+    /* width:50vw; */
+    border:1px solid gray;
+}
+
+#spec #structure #strutureImg img.in-view{
+    -webkit-animation: turnRight 2s linear;
+    animation: turnRight 2s linear;
+}
+
+#mStructureImg{
+    display:none;
+}
+
+#strutureIntro{
+    margin-top:calc(40vw / 13);;
 }
 
 #strutureIntro header{
@@ -544,14 +731,49 @@ p{
     font-size:24px;
     border-bottom: 1px solid #B39559;
     width:155px;
+    margin-bottom: 30px;
 }
 
 #strutureIntro header span{
     padding:5px;
 }
 
+#strutureIntro ul .mLabel{
+    display: none;
+}
+
+#strutureIntro ul li p{
+    margin:0;
+}
+
+#structureLayer ul{
+    padding:0;
+    margin-top:calc(40vw / 6.5);
+}
+
+#structureLayer li{
+    list-style-type:none;
+    border:1px solid red;
+    height:calc(40vw / 6.5);
+}
+
+#structureLayer li p{
+    margin-top:0;
+    margin-bottom: 5px;
+}
+
+#structureLayer .eLabel{
+    margin:0;
+}
+
+#strutureIntro ul{
+    margin-top:-10px;
+    /* border:1px solid purple; */
+}
+
 #strutureIntro li{
-    padding:15px;
+    height:calc(40vw / 6.5);
+    list-style-type: square;
 }
 
 #install {
@@ -600,7 +822,7 @@ p{
 }
 
 .icons {
-    width:90px;
+    width:150px;
 }
 
 .installSteps{
@@ -762,6 +984,19 @@ footer{
         width:70px;
     }
 
+    .sectionTitle{
+        padding:0;
+        height:70px;
+        padding-top:50px;
+        border:1px solid red;
+        text-align:center;
+        vertical-align: middle;
+    }
+
+    .sectionTitle.includeIntro{
+        height:130px;
+    }
+
     #home{
         align-items: flex-start;
         flex-flow: column nowrap;
@@ -916,6 +1151,39 @@ footer{
         margin: 0 auto;
     }
 
+    #spec .firstSubIntro, #install .subIntro{
+        display:block;
+        margin-top:20px;
+    }
+
+    #structure{
+        flex-flow: column wrap;
+    }
+
+    #spec #size img{
+        width:90vw;
+        margin:0;
+        margin-bottom:50px;
+    }
+
+    #spec #structure img#pcStructureImg{
+        display:none;
+    }
+    
+    #spec #structure img#mStructureImg{
+        display:block;
+        width:50vw;
+    }
+
+    #strutureIntro li{
+        height:auto;
+        padding:15px;
+    }
+
+    #structureLayer{
+        display:none;
+    }
+    
     .icons{
         margin:10px;
     }

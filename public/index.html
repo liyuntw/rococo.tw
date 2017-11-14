@@ -39,21 +39,11 @@
         <div class="loading-bar"></div>
         <div class="loading-bar"></div>
     </div>
-    <!-- <main class="wrapperParallax "> -->
-    <!--<div style="border:5px solid gold"><img style="width:100vw" src="./img/brandimage/brandimage_c_t.jpg"></div>-->
-    <div id="fixedIcons">
-        <div>
-            <a href="www.google.com" target="_blank">
-                <img id="getFreeSample" src="./img/icon_freesample.png">
-            </a>
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+            <!-- <img src="./img/brandimage/brandimage_c_t.jpg"> -->
         </div>
-        <div>
-            <!--<img id="goTop" src="./img/icon_top.png">-->
-            <div id="goTop">TOP</div>
-        </div>
-    </div>
-    <section id="home" style="background-image:url(./img/brandimage/brandimage_c_t.jpg); background-repeat:no-repeat;background-size: cover;">
-        <div class="parallax bg1">
+        <div class="parallax__layer parallax__layer--base">
             <div id="homeIntroIcons">
                 <header class="introTxt elementToFadeIn">
                     <h1>ECOLOGICAL FLOORING</h1>
@@ -70,8 +60,41 @@
                     </div>
                 </article>
             </div>
-            <div class="makeEffect">
-                <!-- <div class="wrapper" id="features" style="background:#fff;margin-top:150px">
+        </div>
+    </div>
+    <!-- <main class="wrapperParallax "> -->
+    <!--<div style="border:5px solid gold"><img style="width:100vw" src="./img/brandimage/brandimage_c_t.jpg"></div>-->
+    <div id="fixedIcons">
+        <div>
+            <a href="www.google.com" target="_blank">
+                <img id="getFreeSample" src="./img/icon_freesample.png">
+            </a>
+        </div>
+        <div>
+            <!--<img id="goTop" src="./img/icon_top.png">-->
+            <div id="goTop">TOP</div>
+        </div>
+    </div>
+    <!-- <section id="home">
+       <div class="parallax bg1">
+            <div id="homeIntroIcons">
+                <header class="introTxt elementToFadeIn">
+                    <h1>ECOLOGICAL FLOORING</h1>
+                    <p class="homeIntrop">產品原料安全環保，對人體及環境無毒無害，永續生態。</p>
+                    <p class="homeIntrop">通過美國ASTM，歐盟CE，美國FloorScore，德國DIBT及IMO船舶認證</p>
+                </header>
+                <article>
+                    <div class="elementToFadeIn" id="iconGroup">
+                        <img src="./img/brandimage/icon_aplus.svg" alt="icon_aplus">
+                        <img src="./img/brandimage/icon_dibt.svg" alt="icon_dibt">
+                        <img src="./img/brandimage/icon_astm.svg" alt="icon_astm">
+                        <img src="./img/brandimage/icon_ce.svg" alt="icon_ce">
+                        <img src="./img/brandimage/icon_floorscore.svg" alt="icon_floorscore">
+                    </div>
+                </article>
+            </div>
+            <div class="makeEffect"> -->
+    <!-- <div class="wrapper" id="features" style="background:#fff;margin-top:150px">
                     <header class="sectionTitle">
                         <span>|</span>
                         <span>特</span>
@@ -91,10 +114,10 @@
                             <img src="features/feature_safety.jpg" alt="feature_safety">
                         </div>
                     </article>
-                </div> -->
-            </div>
-        </div>
-    </section>
+                </div> 
+    </div>
+    </div>
+    </section>-->
     <section id="features">
         <div class="wrapper">
             <header class="sectionTitle">
@@ -103,20 +126,20 @@
                 <span>色</span>
                 <span>|</span>
             </header>
-            <article class="fBlock f1">
+            <article class="fBlock animation-element" id="f1">
                 <div class="fContent">
                     <div class="fIconTitle">
-                        <img class="fIcon " src="./img/features/icon_safety.svg" alt="icon_safety">
+                        <img class="fIcon" src="./img/features/icon_safety.svg" alt="icon_safety">
                         <h3>安全環保</h3>
                     </div>
                     <p class="pContainer">產品所有用料安全環保，對人體環境無毒無害，不含放射性元素，不含甲醛。 通過美國ASTM、歐盟CE、美國FloorScore、德國DIBT及IMO船舶認證。
                     </p>
                 </div>
-                <div class="fImg ">
+                <div class="fImg">
                     <img src="./img/features/feature_safety.jpg" alt="feature_safety">
                 </div>
             </article>
-            <article class="fBlock" id="f2">
+            <article class="fBlock animation-element" id="f2">
                 <div class="fImg">
                     <img src="./img/features/feature_voc.jpg" alt="feature_voc">
                 </div>
@@ -131,7 +154,7 @@
                     </p>
                 </div>
             </article>
-            <article class="fBlock" id="f3">
+            <article class="fBlock animation-element" id="f3">
                 <div class="fContent">
                     <div class="fIconTitle">
                         <img class="fIcon" src="./img/features/icon_waterproof.svg" alt="icon_waterproof">
@@ -143,13 +166,13 @@
                     <img src="./img/features/feature_waterproof.jpg" alt="feature_waterproof">
                 </div>
             </article>
-            <article class="fBlock" id="f4">
+            <article class="fBlock animation-element" id="f4">
                 <div class="fImg">
                     <img src="./img/features/feature_abrasion.jpg" al="feature_abrasion">
                 </div>
                 <div class="fContent">
                     <div class="fIconTitle">
-                        <img class="fIcon " src="./img/features/icon_abrasion.svg" alt="icon_abrasion">
+                        <img class="fIcon" src="./img/features/icon_abrasion.svg" alt="icon_abrasion">
                         <h3>超強耐磨</h3>
                     </div>
                     <p class="pContainer">耐磨層0.3mm，使用高分子特殊材質，耐磨度優於一般耐磨塗料。</p>
@@ -157,9 +180,9 @@
                     <p class="pContainer pNote">通過ASTM F925-02(2008)抗化學測試</p>
                 </div>
             </article>
-            <article class="fBlock" id="f5">
+            <article class="fBlock animation-element" id="f5">
                 <div>
-                    <img class="icons" src="./img/features/icon_uv.svg" alt="icon_uv">
+                    <img class="icons" id="fi1" src="./img/features/icon_uv.svg" alt="icon_uv">
                     <h3 class="fTitle">抗UV</h3>
                     <div class="fIntro">
                         <p>特殊抗UV表面塗層，</p>
@@ -167,7 +190,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_foot.svg" alt="icon_foot">
+                    <img class="icons" id="fi2" src="./img/features/icon_foot.svg" alt="icon_foot">
                     <h3 class="fTitle">紮實踩感</h3>
                     <div class="fIntro">
                         <p>特殊彈性結構，抗衝擊，</p>
@@ -175,7 +198,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_temperature.svg" alt="icon_temperature">
+                    <img class="icons" id="fi3" src="./img/features/icon_temperature.svg" alt="icon_temperature">
                     <h3 class="fTitle">冬暖夏涼</h3>
                     <div class="fIntro">
                         <p>溫度傳導均勻。不同於</p>
@@ -183,16 +206,16 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_clean.svg" alt="icon_clean">
+                    <img class="icons" id="fi4" src="./img/features/icon_clean.svg" alt="icon_clean">
                     <h3 class="fTitle">方便保養</h3>
                     <div class="fIntro">
                         <p>防水無縫好清理</p>
                     </div>
                 </div>
             </article>
-            <article class="fBlock" id="f6">
+            <article class="fBlock animation-element" id="f6">
                 <div>
-                    <img class="icons" src="./img/features/icon_flameproof_antiskid.svg" alt="icon_flameproof_antiskid">
+                    <img class="icons" id="fi5" src="./img/features/icon_flameproof_antiskid.svg" alt="icon_flameproof_antiskid">
                     <h3 class="fTitle">防火防滑</h3>
                     <div class="fIntro">
                         <p>R10防滑等級</p>
@@ -201,7 +224,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_2g.svg" alt="icon_2g">
+                    <img class="icons" id="fi6" src="./img/features/icon_2g.svg" alt="icon_2g">
                     <h3 class="fTitle">簡便安裝</h3>
                     <div class="fIntro">
                         <p>瑞典Valinge專利2G click-on</p>
@@ -209,7 +232,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_5t.svg" alt="icon_5t">
+                    <img class="icons" id="fi7" src="./img/features/icon_5t.svg" alt="icon_5t">
                     <h3 class="fTitle">堅固耐用</h3>
                     <div class="fIntro">
                         <p>最高規格5mm厚度。可支撐</p>
@@ -217,7 +240,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="icons" src="./img/features/icon_warranty.svg" alt="icon_warranty">
+                    <img class="icons" id="fi8" src="./img/features/icon_warranty.svg" alt="icon_warranty">
                     <h3 class="fTitle">保固</h3>
                     <div class="fIntro">
                         <p>住家空間20年保固</p>
@@ -235,176 +258,203 @@
             <span>表</span>
             <span>|</span>
         </header>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>
-                        <span class="compareIcon">
+        <div id="collapseTable" class="animation-element">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>
+                            <span class="compareIcon">
                             <img class="mainbig" src="./img/compare/icon_rococowood.svg">
                             <span class="iconHead">ROCOCO生態地板</span>
-                        </span>
-                    </th>
-                    <th>
-                        <span class="compareIcon otherBrand">
+                            </span>
+                        </th>
+                        <th>
+                            <span class="compareIcon otherBrand">
                             <img class="small" src="./img/compare/icon_antiskidwood.svg">
                             <span class="iconHead">超耐磨木地板</span>
-                        </span>
-                    </th>
-                    <th>
-                        <span class="compareIcon otherBrand">
+                            </span>
+                        </th>
+                        <th>
+                            <span class="compareIcon otherBrand">
                             <img class="small" src="./img/compare/icon_tiles.svg">
                             <span class="iconHead">木紋地板</span>
-                        </span>
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span>有害物質</span></td>
-                    <td><span>零甲醛</span></td>
-                    <td><span>含甲醛</span></td>
-                    <td><span>甲醛/重金屬輻射</span></td>
-                </tr>
-                <tr>
-                    <td><span>防水效果</span></td>
-                    <td><span>100%防水</span></td>
-                    <td><span>滲水變形</span></td>
-                    <td><span>100%防水</span></td>
-                </tr>
-                <tr>
-                    <td><span>白蟻蟲害</span></td>
-                    <td><span>零白蟻蟲蛀問題</span></td>
-                    <td><span>白蟻孳生</span></td>
-                    <td><span>無蟲害</span></td>
-                </tr>
-                <tr>
-                    <td><span>安全性</span></td>
-                    <td><span>防水防滑</span></td>
-                    <td><span>易然程度不一</span></td>
-                    <td><span>易然程度不一</span></td>
-                </tr>
-                <tr>
-                    <td><span>清潔保養</span></td>
-                    <td><span>無縫防水好清理</span></td>
-                    <td><span>不防水，保養不易</span></td>
-                    <td><span>溝縫藏污納垢</span></td>
-                </tr>
-                <tr>
-                    <td><span>季節變化</span></td>
-                    <td><span>冬暖夏涼</span></td>
-                    <td><span>冬暖夏涼</span></td>
-                    <td><span>冬季冰冷</span></td>
-                </tr>
-                <tr>
-                    <td><span>施工安裝</span></td>
-                    <td><span>可自行安裝/原廠認證師傅施工1000/坪</span></td>
-                    <td><span>1000-1500/坪</span></td>
-                    <td><span>1500-2000/坪</span></td>
-                </tr>
-                <tr>
-                    <td><span>價格</span></td>
-                    <td><span>詳閱訂購頁面</span></td>
-                    <td><span>3000-6000/坪</span></td>
-                    <td><span>3000-8000/坪</td>
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span>有害物質</span></td>
+                        <td><span>零甲醛</span></td>
+                        <td><span>含甲醛</span></td>
+                        <td><span>甲醛/重金屬輻射</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>防水效果</span></td>
+                        <td><span>100%防水</span></td>
+                        <td><span>滲水變形</span></td>
+                        <td><span>100%防水</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>白蟻蟲害</span></td>
+                        <td><span>零白蟻蟲蛀問題</span></td>
+                        <td><span>白蟻孳生</span></td>
+                        <td><span>無蟲害</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>安全性</span></td>
+                        <td><span>防水防滑</span></td>
+                        <td><span>易然程度不一</span></td>
+                        <td><span>易然程度不一</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>清潔保養</span></td>
+                        <td><span>無縫防水好清理</span></td>
+                        <td><span>不防水，保養不易</span></td>
+                        <td><span>溝縫藏污納垢</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>季節變化</span></td>
+                        <td><span>冬暖夏涼</span></td>
+                        <td><span>冬暖夏涼</span></td>
+                        <td><span>冬季冰冷</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>施工安裝</span></td>
+                        <td><span>可自行安裝/原廠認證師傅施工1000/坪</span></td>
+                        <td><span>1000-1500/坪</span></td>
+                        <td><span>1500-2000/坪</span></td>
+                    </tr>
+                    <tr>
+                        <td><span>價格</span></td>
+                        <td><span>詳閱訂購頁面</span></td>
+                        <td><span>3000-6000/坪</span></td>
+                        <td><span>3000-8000/坪</td>
                 </tr>
             </tbody>
         </table>
+        </div>
     </section>
     <section id="wood">
         <header class="sectionTitle">
             <span>|</span>
-                        <span>木</span>
-                        <span>紋</span>
-                        <span>|</span>
-                        </header>
-                        <section class="woodSlider">
-                            <div class="woodSet_m"><img class="woodImg_m" id="beech" src="./img/wood/material_beech.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="birch" src="./img/wood/material_birch.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="cherry" src="./img/wood/material_cherry.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="elm" src="./img/wood/material_elm.jpg "></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="fir" src="./img/wood/material_fir.jpg "></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="maple" src="./img/wood/material_maple.jpg "></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="oak" src="./img/wood/material_oak.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="olive" src="./img/wood/material_olive.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="paulownia" src="./img/wood/material_paulownia.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="pine" src="./img/wood/material_pine.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="robinia" img src="./img/wood/material_robinia.jpg"></div>
-                            <div class="woodSet_m"><img class="woodImg_m" id="teak" img src="./img/wood/material_teak.jpg"></div>
-                        </section>
-                        <section class="regular slider">
-                            <div class="sliderDiv1"><img id="s_kitchen" src="./img/wood/kitchen_beech.jpg"></div>
-                            <div class="sliderDiv"><img id="s_living_room" src="./img/wood/living_room_beech.jpg"></div>
-                            <div class="sliderDiv"><img id="s_room" src="./img/wood/room_beech.jpg"></div>
-                        </section>
-                        <div id="woodMaterial">
-                            <div class="woodSet" id="beech">
-                                <img src="./img/wood/material_beech.jpg">
-                                <span class="hoverTxt">山毛櫸</span>
+                            <span>木</span>
+                            <span>紋</span>
+                            <span>|</span>
+                            </header>
+                            <section class="woodSlider">
+                                <div class="woodSet_m"><img class="woodImg_m" id="beech" src="./img/wood/material_beech.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="birch" src="./img/wood/material_birch.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="cherry" src="./img/wood/material_cherry.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="elm" src="./img/wood/material_elm.jpg "></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="fir" src="./img/wood/material_fir.jpg "></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="maple" src="./img/wood/material_maple.jpg "></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="oak" src="./img/wood/material_oak.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="olive" src="./img/wood/material_olive.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="paulownia" src="./img/wood/material_paulownia.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="pine" src="./img/wood/material_pine.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="robinia" img src="./img/wood/material_robinia.jpg"></div>
+                                <div class="woodSet_m"><img class="woodImg_m" id="teak" img src="./img/wood/material_teak.jpg"></div>
+                            </section>
+                            <section class="regular slider">
+                                <div class="sliderDiv1"><img id="s_kitchen" src="./img/wood/kitchen_beech.jpg"></div>
+                                <div class="sliderDiv"><img id="s_living_room" src="./img/wood/living_room_beech.jpg"></div>
+                                <div class="sliderDiv"><img id="s_room" src="./img/wood/room_beech.jpg"></div>
+                            </section>
+                            <div id="woodMaterial">
+                                <div class="woodSet" id="beech">
+                                    <img src="./img/wood/material_beech.jpg">
+                                    <span class="hoverTxt">山毛櫸</span>
+                                </div>
+                                <div class="woodSet" id="birch">
+                                    <img src="./img/wood/material_birch.jpg">
+                                    <span class="hoverTxt">白樺</span>
+                                </div>
+                                <div class="woodSet" id="cherry">
+                                    <img src="./img/wood/material_cherry.jpg">
+                                    <span class="hoverTxt">櫻桃木</span>
+                                </div>
+                                <div class="woodSet" id="elm">
+                                    <img src="./img/wood/material_elm.jpg">
+                                    <span class="hoverTxt">黃榆</span>
+                                </div>
+                                <div class="woodSet" id="fir">
+                                    <img src="./img/wood/material_fir.jpg">
+                                    <span class="hoverTxt">雲杉</span>
+                                </div>
+                                <div class="woodSet" id="maple">
+                                    <img src="./img/wood/material_maple.jpg">
+                                    <span class="hoverTxt">楓木</span>
+                                </div>
+                                <div class="woodSet" id="oak">
+                                    <img src="./img/wood/material_oak.jpg">
+                                    <span class="hoverTxt">古橡</span>
+                                </div>
+                                <div class="woodSet" id="olive">
+                                    <img src="./img/wood/material_olive.jpg">
+                                    <span class="hoverTxt">橄欖木</span>
+                                </div>
+                                <div class="woodSet" id="paulownia">
+                                    <img src="./img/wood/material_paulownia.jpg">
+                                    <span class="hoverTxt">深桐</span>
+                                </div>
+                                <div class="woodSet" id="pine">
+                                    <img src="./img/wood/material_pine.jpg">
+                                    <span class="hoverTxt">雪松</span>
+                                </div>
+                                <div class="woodSet" id="robinia">
+                                    <img src="./img/wood/material_robinia.jpg">
+                                    <span class="hoverTxt">洋槐</span>
+                                </div>
+                                <div class="woodSet" id="teak">
+                                    <img src="./img/wood/material_teak.jpg">
+                                    <span class="hoverTxt">紅柚</span>
+                                </div>
                             </div>
-                            <div class="woodSet" id="birch">
-                                <img src="./img/wood/material_birch.jpg">
-                                <span class="hoverTxt">白樺</span>
-                            </div>
-                            <div class="woodSet" id="cherry">
-                                <img src="./img/wood/material_cherry.jpg">
-                                <span class="hoverTxt">櫻桃木</span>
-                            </div>
-                            <div class="woodSet" id="elm">
-                                <img src="./img/wood/material_elm.jpg">
-                                <span class="hoverTxt">黃榆</span>
-                            </div>
-                            <div class="woodSet" id="fir">
-                                <img src="./img/wood/material_fir.jpg">
-                                <span class="hoverTxt">雲杉</span>
-                            </div>
-                            <div class="woodSet" id="maple">
-                                <img src="./img/wood/material_maple.jpg">
-                                <span class="hoverTxt">楓木</span>
-                            </div>
-                            <div class="woodSet" id="oak">
-                                <img src="./img/wood/material_oak.jpg">
-                                <span class="hoverTxt">古橡</span>
-                            </div>
-                            <div class="woodSet" id="olive">
-                                <img src="./img/wood/material_olive.jpg">
-                                <span class="hoverTxt">橄欖木</span>
-                            </div>
-                            <div class="woodSet" id="paulownia">
-                                <img src="./img/wood/material_paulownia.jpg">
-                                <span class="hoverTxt">深桐</span>
-                            </div>
-                            <div class="woodSet" id="pine">
-                                <img src="./img/wood/material_pine.jpg">
-                                <span class="hoverTxt">雪松</span>
-                            </div>
-                            <div class="woodSet" id="robinia">
-                                <img src="./img/wood/material_robinia.jpg">
-                                <span class="hoverTxt">洋槐</span>
-                            </div>
-                            <div class="woodSet" id="teak">
-                                <img src="./img/wood/material_teak.jpg">
-                                <span class="hoverTxt">紅柚</span>
-                            </div>
-                        </div>
     </section>
     <section id="spec">
-        <header class="sectionTitle">
+        <header class="sectionTitle includeIntro">
             <span>|</span>
             <span>規</span>
             <span>格</span>
             <span>|</span>
-            <span class="subIntro">頂規大尺寸18cm x 122cm </span>
+            <span class="subIntro firstSubIntro">頂規大尺寸18cm x 122cm </span>
             <span class="subIntro">厚度5mm</span>
             <span class="subIntro">耐磨層0.3mm</span>
         </header>
         <p style="padding-left:60px;margin:0">兼顧大器空間感及實用性</p>
         <div id="size">
-            <img src="./img/spec/spec_01_c.jpg">
+            <img src="./img/spec/spec_01_c.jpg" class="animation-element">
         </div>
         <article id="structure">
             <div id="strutureImg">
-                <img src="./img/spec/spec_03_c.jpg">
+                <img id="pcStructureImg" src="./img/spec/spec_03_c.jpg" class="animation-element">
+                <img id="mStructureImg" src="./img/spec/spec_02_c_m.jpg" class="animation-element">
+            </div>
+            <div id="structureLayer">
+                <ul>
+                    <li>
+                        <p>UV表面處理</p>
+                        <p class="eLabel">UV Surface Treatment</p>
+                    </li>
+                    <li>
+                        <p>透明耐磨層</p>
+                        <p class="eLabel">Wear Layer</p>
+                    </li>
+                    <li>
+                        <p>印刷面料層</p>
+                        <p class="eLabel">Printing Layer</p>
+                    </li>
+                    <li>
+                        <p>中底玻纖層</p>
+                        <p class="eLabel">Middle Layer</p>
+                    </li>
+                    <li>
+                        <p>底料層</p>
+                        <p class="eLabel">Backing Layer</p>
+                    </li>
+                </ul>
             </div>
             <div id="strutureIntro">
                 <header>
@@ -414,17 +464,32 @@
                     <span>構</span>
                 </header>
                 <ul>
-                    <li>增強地板表面耐磨抗刮性能，統一表面光澤度，增強防水耐汙功能</li>
-                    <li>確保耐磨強度，增加使用年限</li>
-                    <li>提供各式花紋樣式選擇</li>
-                    <li>主要支撐結構，增強硬度及抗壓強度。玻纖結構降低熱漲冷縮率。</li>
-                    <li>平衡作用，確保地板不拱不翹</li>
+                    <li>
+                        <p class="mLabel">UV表面處理</p>
+                        <p>增強地板表面耐磨抗刮性能，統一表面光澤度，增強防水耐汙功能</p>
+                    </li>
+                    <li>
+                        <p class="mLabel">透明耐磨層</p>
+                        <p>確保耐磨強度，增加使用年限</p>
+                    </li>
+                    <li>
+                        <p class="mLabel">印刷面料層</p>
+                        <p>提供各式花紋樣式選擇</p>
+                    </li>
+                    <li>
+                        <p class="mLabel">中底玻纖層</p>
+                        <p>主要支撐結構，增強硬度及抗壓強度。玻纖結構降低熱漲冷縮率。</p>
+                    </li>
+                    <li>
+                        <p class="mLabel">底料層</p>
+                        <p>平衡作用，確保地板不拱不翹</p>
+                    </li>
                 </ul>
             </div>
         </article>
     </section>
     <section id="install" style="background-image:url('./img/bg/install_bg_c.jpg')">
-        <header class="sectionTitle">
+        <header class="sectionTitle includeIntro">
             <span>|</span>
             <span>安</span>
             <span>裝</span>
@@ -629,6 +694,59 @@
                     scrollTop: $('body').offset().top
                 }, 500);
             });
+
+            //window and animation items
+            var animation_elements = $.find('.animation-element');
+            var web_window = $(window);
+
+            //check to see if any animation containers are currently in view
+            function check_if_in_view() {
+                //get current window information
+                var window_height = web_window.height();
+                var window_top_position = web_window.scrollTop();
+                var window_bottom_position = (window_top_position + window_height);
+
+                //iterate through elements to see if its in view
+                $.each(animation_elements, function () {
+
+                    //get the element sinformation
+                    var element = $(this);
+                    var element_height = $(element).outerHeight();
+                    var element_top_position = $(element).offset().top;
+                    var element_bottom_position = (element_top_position + element_height);
+
+                    //check to see if this current container is visible (its viewable if it exists between the viewable space of the viewport)
+                    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
+                        element.addClass('in-view');
+                    } else {
+                        element.removeClass('in-view');
+                    }
+                });
+
+            }
+
+            //on or scroll, detect elements in view
+            $(window).on('scroll resize', function () {
+                check_if_in_view()
+                fixedIconsInView();
+            })
+            //trigger our scroll event on initial load
+            $(window).trigger('scroll');
+
+            function fixedIconsInView() {
+                var window_height = web_window.height();
+                var height = $(window).scrollTop();
+                console.log(window_height, height);
+                if ($(document).scrollTop() > window_height) {
+                    $("#fixedIcons").addClass("show");
+                } else {
+                    $("#fixedIcons").removeClass("show");
+                }
+            }
+
+            $(window).scrollTop(function () {
+                console.log("scroll", $(window).scrollTop(), $(document).scrollTop());
+            })
         });
     </script>
 </body>
