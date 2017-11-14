@@ -13,6 +13,36 @@
     <link rel="icon" href="./img/favicon.png" type="image/gif" sizes="16x16">
     <link href="./css/website.css" rel="stylesheet">
     <title>ROCOCO</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109496625-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109496625-1');
+    </script>
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1988195324761220');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=1988195324761220&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -28,8 +58,8 @@
             <li><a href="#wood">木紋</a></li>
             <li><a href="#spec">規格</a></li>
             <li><a href="#install">安裝</a></li>
-            <li><a href="#buy">免費樣板</a></li>
-            <li><a href="#buy">訂購</a></li>
+            <li><a href="https://shopee.tw/rococo.taiwan" target="_blank">免費樣板</a></li>
+            <li><a href="https://shopee.tw/rococo.taiwan" target="_blank">訂購</a></li>
             <li class="lastLi "><a href="#footer">聯繫</a></li>
         </ul>
     </nav>
@@ -52,7 +82,7 @@
                 </header>
                 <article>
                     <div class="elementToFadeIn" id="iconGroup">
-                        <img src="./img/brandimage/icon_aplus.svg" alt="icon_aplus">
+                        <img src="./img/brandimage/iconaplus.svg" alt="icon_aplus">
                         <img src="./img/brandimage/icon_dibt.svg" alt="icon_dibt">
                         <img src="./img/brandimage/icon_astm.svg" alt="icon_astm">
                         <img src="./img/brandimage/icon_ce.svg" alt="icon_ce">
@@ -66,8 +96,9 @@
     <!--<div style="border:5px solid gold"><img style="width:100vw" src="./img/brandimage/brandimage_c_t.jpg"></div>-->
     <div id="fixedIcons">
         <div>
-            <a href="www.google.com" target="_blank">
-                <img id="getFreeSample" src="./img/icon_freesample.png">
+            <a href="https://shopee.tw/rococo.taiwan" target="_blank">
+                <img id="getFreeSample" src="./img/icon_freesample.png" onmouseover="this.src='./img/icon_freesample_hover.png'" onmouseout="this.src='./img/icon_freesample.png'"> 
+                <!-- <div id="getFreeSample"></div> -->
             </a>
         </div>
         <div>
@@ -747,6 +778,11 @@
             $(window).scrollTop(function () {
                 console.log("scroll", $(window).scrollTop(), $(document).scrollTop());
             })
+
+            // $("#getFreeSample").hover(function () {
+            //     console.log("getfreesample");
+            //     $(this).attr("src", "./img/icon_freesample_hover.png")
+            // })
         });
     </script>
 </body>
