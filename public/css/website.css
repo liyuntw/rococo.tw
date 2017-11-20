@@ -251,6 +251,7 @@ p{
     border:1px solid red;
     margin-top:75vh;*/
     padding:20px;
+    margin-top:75vh;
     /* border:1px solid red; */
 }
 
@@ -428,14 +429,14 @@ p{
 
 #f1.in-view .fImg,
 #f3.in-view .fImg{
-    -webkit-animation: turnLeft 3s linear;
-    animation: turnLeft 3s linear;
+    -webkit-animation: fadeinLittle 1s linear;
+    animation: fadeinLittle 1s linear;
 }
 
 #f2.in-view .fImg,
 #f4.in-view .fImg{
-    -webkit-animation: turnRight 3s linear;
-    animation: turnRight 3s linear;
+    -webkit-animation: fadeinLittle 1s linear;
+    animation: fadeinLittle 1s linear;
 }
 
 @-webkit-keyframes turnLeft{
@@ -684,8 +685,8 @@ p{
 }
 
 #spec #size img.in-view{
-    -webkit-animation: turnLeft 2s linear;
-    animation: turnLeft 2s linear;
+    -webkit-animation: fadeinLittle 1s linear;
+    animation: fadeinLittle 1s linear;
 }
 
 #spec #structure img{
@@ -715,8 +716,8 @@ p{
 }
 
 #spec #structure #strutureImg img.in-view{
-    -webkit-animation: turnRight 2s linear;
-    animation: turnRight 2s linear;
+    -webkit-animation: fadeinLittle 1s linear;
+    animation: fadeinLittle 2s linear;
 }
 
 #mStructureImg{
@@ -1136,6 +1137,7 @@ footer{
 
     .regular.slider img{
         width:100vw;
+        margin:0 auto;
     }
 
     #wood{
@@ -1150,24 +1152,44 @@ footer{
         margin:0 auto;
     }
 
-    .woodSlider .slick-prev{
+    /* .woodSlider .slick-prev{
         left:5px;
     }
 
     .woodSlider .slick-next{
         right:5px;
-    }
+    } */
 
      /* slick theme, need to be revised */
+     .slick-prev{
+         left:-5px;
+     }
+     .slick-prev:before{
+         margin-left:-5px;
+     }
+
+     .slick-next{
+         right:-5px;
+     }
+
+     .slick-next{
+        margin-right:25px;
+    }
+
     .slick-prev, .slick-next{
-        display:none !important;
+        z-index:10;
     }
 
     .slick-prev:before, 
     .slick-next:before{
         z-index: 10;
-        opacity:0.5;
-        display:none;
+        opacity:0.8;
+        color:#fff;
+        /* display:none; */
+    }
+    .woodSlider .slick-prev,
+    .woodSlider .slick-next{
+        display:none !important;
     }
 
     .woodSlider img{
