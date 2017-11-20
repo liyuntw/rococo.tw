@@ -43,6 +43,28 @@
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
+    <style>
+        .parallax {
+            /* background-image: url("https://d3n8a8pro7vhmx.cloudfront.net/taxpayers/pages/679/attachments/original/1499663166/4-ways-cheer-up-depressed-cat.jpg?1499663166"); */
+            background-image: url("./img/brandimage/brandimage_c_t.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .parallax h1 {
+            text-align: left;
+            font-size: 35px;
+            color: white;
+            margin-top: 70vh;
+        }
+
+        .makeEffects {
+            height: 1000px;
+            border: 1px solid orange;
+            width: 100vw;
+        }
+    </style>
 </head>
 
 <body>
@@ -69,10 +91,8 @@
         <div class="loading-bar"></div>
         <div class="loading-bar"></div>
     </div>
-    <div class="parallax">
-        <div class="parallax__layer parallax__layer--back">
-            <!-- <img src="./img/brandimage/brandimage_c_t.jpg"> -->
-        </div>
+    <!-- <div class="parallax">
+        <div class="parallax__layer parallax__layer--back"></div>
         <div class="parallax__layer parallax__layer--base">
             <div id="homeIntroIcons">
                 <header class="introTxt elementToFadeIn">
@@ -91,7 +111,27 @@
                 </article>
             </div>
         </div>
-    </div>
+    </div> -->
+    <section class="parallax">
+        <div id="homeIntroIcons">
+            <header class="introTxt elementToFadeIn">
+                <h1>ECOLOGICAL FLOORING</h1>
+                <p class="homeIntrop">產品原料安全環保，對人體及環境無毒無害，永續生態。</p>
+                <p class="homeIntrop">通過美國ASTM，歐盟CE，美國FloorScore，德國DIBT及IMO船舶認證</p>
+            </header>
+            <article>
+                <div class="elementToFadeIn" id="iconGroup">
+                    <img src="./img/brandimage/iconaplus.svg" alt="icon_aplus">
+                    <img src="./img/brandimage/icon_dibt.svg" alt="icon_dibt">
+                    <img src="./img/brandimage/icon_astm.svg" alt="icon_astm">
+                    <img src="./img/brandimage/icon_ce.svg" alt="icon_ce">
+                    <img src="./img/brandimage/icon_floorscore.svg" alt="icon_floorscore">
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- <section class="makeEffects">helloworld</section> -->
+
     <!-- <main class="wrapperParallax "> -->
     <!--<div style="border:5px solid gold"><img style="width:100vw" src="./img/brandimage/brandimage_c_t.jpg"></div>-->
     <div id="fixedIcons">
@@ -389,8 +429,8 @@
                                 <div class="woodSet_m"><img class="woodImg_m" id="teak" img src="./img/wood/material_teak.jpg"></div>
                             </section>
                             <section class="regular slider">
-                                <div class="sliderDiv1"><img id="s_kitchen" src="./img/wood/kitchen_beech.jpg"></div>
-                                <div class="sliderDiv"><img id="s_living_room" src="./img/wood/living_room_beech.jpg"></div>
+                                <div class="sliderDiv"><img id="s_kitchen" src="./img/wood/kitchen_beech.jpg"></div>
+                                <div class="sliderDiv"><img id="s_parlor" src="./img/wood/parlor_beech.jpg"></div>
                                 <div class="sliderDiv"><img id="s_room" src="./img/wood/room_beech.jpg"></div>
                             </section>
                             <div id="woodMaterial">
@@ -663,10 +703,10 @@
 
             $(".regular").slick({
                 dots: true,
-                infinite: false,
+                infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                autoplay: true
+                autoplay: false
             });
             if (screen.width > 480) {
                 $(".woodSlider").css("display", "none");
@@ -683,18 +723,45 @@
             });
 
             $(".woodSet").click(function () {
-                console.log($(this));
+                console.log(".woodset", $(this));
                 var id = $(this).attr('id');
-                console.log(id);
-                var kitchen_url = "wood/kitchen_" + id + ".jpg";
-                var living_room_url = "wood/living_room_" + id + ".jpg";
-                var room_url = "wood/room_" + id + ".jpg";
-                $(".regular.slider #s_kitchen").attr("src", kitchen_url);
-                $(".regular.slider #s_living_room").attr("src", living_room_url);
-                $(".regular.slider #s_room").attr("src", room_url);
-                $(".regular").slick({
-                    autoplay: true
-                });
+                console.log("woodset id", id);
+                var kitchen_url = "./img/wood/kitchen_" + id + ".jpg";
+                var living_room_url = "./img/wood/living_room_" + id + ".jpg";
+                var room_url = "./img/wood/room_" + id + ".jpg";
+                console.log("kitchen_url", kitchen_url);
+                // $(".regular.slider #s_kitchen").attr("src", kitchen_url);
+                // $(".regular.slider #s_living_room").attr("src", living_room_url);
+                // $(".regular.slider #s_room").attr("src", room_url);
+
+                /* ref:https://stackoverflow.com/questions/18101673/jquery-get-all-src-of-images-in-div-and-put-into-field*/
+                var imagesURL = $('.sliderDiv').children('img').map(function () {
+                    return $(this).attr('src')
+                }).get();
+                var replaceImgURL = imagesURL.map(function (el) {
+                    var materialURL;
+                    if (el.match("room")) {
+                        console.log("match,room", el);
+                        materialURL = el.substring(0, 16) + id + ".jpg";
+                        return materialURL;
+                    } else if (el.match("parlor")) {
+                        console.log("match parlar", el);
+                        materialURL = el.substring(0, 18) + id + ".jpg";
+                        return materialURL;
+                    } else if (el.match("kitchen")) {
+                        console.log("match kitche", el);
+                        materialURL = el.substring(0, 19) + id + ".jpg";
+                        return materialURL;
+                    } else {
+                        console.log("no found");
+                    }
+                })
+                console.log("img urls", imagesURL, replaceImgURL);
+                $('.sliderDiv').children('img').map(function (idx) {
+                    console.log(idx, replaceImgURL[idx]);
+                    $(this).attr("src", replaceImgURL[idx]);
+                }).get();
+                $('.regular').slick('slickPause');
             })
 
             $(".woodImg_m").click(function () {
@@ -707,9 +774,7 @@
                 $(".regular.slider #s_kitchen").attr("src", kitchen_url);
                 $(".regular.slider #s_living_room").attr("src", living_room_url);
                 $(".regular.slider #s_room").attr("src", room_url);
-                $(".regular").slick({
-                    autoplay: true
-                });
+                $('.regular').slick('slickPause');
             })
 
 
@@ -783,6 +848,22 @@
             //     console.log("getfreesample");
             //     $(this).attr("src", "./img/icon_freesample_hover.png")
             // })
+
+            /* parallax */
+            var parallax = document.querySelector(".parallax");
+            window.addEventListener("scroll", function () {
+                var scrolledHeight = window.pageYOffset,
+                    limit = parallax.offsetTop + parallax.offsetHeight;
+                console.log("scrollHeight", scrolledHeight);
+                console.log("limit", parallax.offsetTop, parallax.offsetHeight, limit);
+                if (scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
+                    parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
+                    console.log("backgroundPositionY", parallax.style.backgroundPositionY);
+                }
+                else {
+                    parallax.style.backgroundPositionY = "0";
+                }
+            });
         });
     </script>
 </body>
