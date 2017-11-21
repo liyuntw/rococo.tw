@@ -9,63 +9,26 @@ p{
     color:#444444;
 }
 
-/*** parallax scrolling ref: https://alligator.io/css/pure-css-parallax/ ***/
-/*.wrapperParallax {
-    overflow-x: hidden;
-    overflow-y: scroll;
-      height: 100vh; 
-    /* perspective: 2px; 
-    /* border:5px solid pink; 
-}*/
-
 .parallax {
+    background-image: url("../img/brandimage/brandimage_c_t.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
-    width:100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-perspective: 2px;
-    perspective: 2px;
-    /* border:5px solid orange; */
-    z-index:1000;
-    /* background-image: url(../img/brandimage/brandimage_c_t.jpg);
-    background-size:cover; */
+    z-index: 1999;
 }
 
-.parallax__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index:2000;
+.parallax h1 {
+    text-align: left;
+    font-size: 35px;
+    color: white;
+    margin-top: 70vh;
 }
 
-.parallax__layer--base {
-    -webkit-transform: translateZ(0px);
-    transform: translateZ(0px);
-    /* background-image: url(../img/brandimage/brandimage_c_t.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;  */
+.makeEffects {
+    height: 1000px;
+    border: 1px solid orange;
+    width: 100vw;
 }
-
-.parallax__layer--back {
-    -webkit-transform: translateZ(-1px) scale(1.5);
-    transform: translateZ(-1px) scale(1.5);
-    background-image: url(../img/brandimage/brandimage_c_t.jpg);
-    background-repeat: no-repeat;
-    /* background-size: cover;  */
-    width:100vw;
-}
-
-.parallax {
-    /* font-size: 200%;*/
-} 
-/* add some padding to force scrollbars */
-
-.parallax__layer {
-    padding: 75vh 0;
-}
-/* centre the content in the parallax layers */
 
 #nav {
     background: #B39559;
@@ -120,18 +83,6 @@ p{
 #nav .lastLi{
     padding-right:30px;
 }
-
-/* #fixedIcons {
-    display:none; 
-} */
-
-/* #fixedIcons{
-    position: fixed;
-    top:80vh;
-    right:20px;
-    padding:0 20px;
-    z-index:999;
-} */
 
 #fixedIcons{
     display:none;
@@ -188,8 +139,6 @@ p{
 .introTxt{
     padding:20px;
     padding-left:50px;
-    /* margin-top:60vh; */
-    /* border:2px solid yellow; */
 }
 
 .introTxt h1{
@@ -201,13 +150,7 @@ p{
     font-size:16px;
 }
 
-.parallax {
-    /* border:3px solid orange; */
-    /*height:300px;
-    margin-top:200px;*/
-}
 .parallax #homeIntroIcons{
-    /* border:5px solid peru; */
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -228,31 +171,14 @@ p{
     /* border:2px solid green; */
 }
 
-.makeEffect{
-    /* height:80vh; */
-    padding:10vh 0;
-    width:100vw;
-    /* border:1px solid pink; */
-}
-
-.bg1::after {
-    /*background-image: url('../img/brandimage/brandimage_c_t.jpg');*/
-}
-
 .elementToFadeIn {
     -webkit-animation: fadein 3s linear;
     animation: fadein 3s linear;
 }
 
 #iconGroup{
-    /* margin-left:60vw;
-    width:500px;
-    margin-top:-150px; 
-    border:1px solid red;
-    margin-top:75vh;*/
     padding:20px;
     margin-top:75vh;
-    /* border:1px solid red; */
 }
 
 #iconGroup img{
@@ -278,10 +204,6 @@ p{
 
 .sectionTitle span{
     margin:10px;
-}
-
-#features{
-    /* border:10px solid yellow; */
 }
 
 .pNote{
@@ -460,14 +382,7 @@ p{
 }
 
 #compare{
-    content:'';
-    /*background-image: url('../img/bg/bg_compare.jpg');
-    background-size:100%;*/
     height:700px;
-    /* border:1px solid red; */
-}
-
-#compare{
     padding:50px 0px;
     padding-bottom:120px;
 }
@@ -586,10 +501,6 @@ p{
     margin:0 auto;
 }
   
-/* #compare table.in-view  {
-    height:100%;
-} */
-
 #compare #collapseTable.in-view  {
     height:100%;
 }
@@ -642,7 +553,6 @@ p{
 
 #woodMaterial img{
     width:150px;
-    /* padding:3px; */
 }
 
 .woodSet{
@@ -779,7 +689,6 @@ p{
 }
 
 #install {
-    /*background-image:url('../img/bg/install_bg.jpg');*/
     background-size:100%;
 }
 
@@ -984,15 +893,6 @@ footer{
         /* border:1px solid lightgray; */
     }
 
-    /*.parallax__layer--back{
-        background-image: url('../img/brandimage/brandimage_m.jpg');
-        width:100vw;
-    }*/
-
-    .bg1::after {
-        /* background-image: url('brandimage/brandimage_m.jpg'); */
-    }
-
     #fixedIcons{
         left:80vw;
         padding:0;
@@ -1023,7 +923,6 @@ footer{
     }
 
     .introTxt{
-        /* margin-top:75vh; */
         width:80vw;
         padding-left:0;
         /* border:1px solid lightgreen; */
@@ -1035,7 +934,6 @@ footer{
 
     #iconGroup{
         margin:0 auto;
-        /*padding-left:50px;*/
         width:80vw;
     }
 
@@ -1306,41 +1204,47 @@ footer{
     position: absolute;
     top: 50%;
     left: 50%;
-  }
-  .loading-bar {
+    z-index:-2;
+}
+
+.loading-bar {
     display: inline-block;
     width: 4px;
     height: 18px;
     border-radius: 4px;
     animation: loading 1s ease-in-out infinite;
-  }
-  .loading-bar:nth-child(1) {
+}
+
+.loading-bar:nth-child(1) {
     background-color: #171f2a;
     animation-delay: 0;
-  }
-  .loading-bar:nth-child(2) {
+}
+
+.loading-bar:nth-child(2) {
     background-color: #B39559;
     animation-delay: 0.09s;
-  }
-  .loading-bar:nth-child(3) {
+}
+
+.loading-bar:nth-child(3) {
     background-color: #171f2a;
     animation-delay: .18s;
-  }
-  .loading-bar:nth-child(4) {
+}
+
+.loading-bar:nth-child(4) {
     background-color: #B39559;
     animation-delay: .27s;
-  }
-  
-  @keyframes loading {
+}
+
+@keyframes loading {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     20% {
-      transform: scale(1, 2.2);
+        transform: scale(1, 2.2);
     }
     40% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
 
 

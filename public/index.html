@@ -43,28 +43,6 @@
     &noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
-    <style>
-        .parallax {
-            /* background-image: url("https://d3n8a8pro7vhmx.cloudfront.net/taxpayers/pages/679/attachments/original/1499663166/4-ways-cheer-up-depressed-cat.jpg?1499663166"); */
-            background-image: url("./img/brandimage/brandimage_c_t.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100vh;
-        }
-
-        .parallax h1 {
-            text-align: left;
-            font-size: 35px;
-            color: white;
-            margin-top: 70vh;
-        }
-
-        .makeEffects {
-            height: 1000px;
-            border: 1px solid orange;
-            width: 100vw;
-        }
-    </style>
 </head>
 
 <body>
@@ -91,27 +69,6 @@
         <div class="loading-bar"></div>
         <div class="loading-bar"></div>
     </div>
-    <!-- <div class="parallax">
-        <div class="parallax__layer parallax__layer--back"></div>
-        <div class="parallax__layer parallax__layer--base">
-            <div id="homeIntroIcons">
-                <header class="introTxt elementToFadeIn">
-                    <h1>ECOLOGICAL FLOORING</h1>
-                    <p class="homeIntrop">產品原料安全環保，對人體及環境無毒無害，永續生態。</p>
-                    <p class="homeIntrop">通過美國ASTM，歐盟CE，美國FloorScore，德國DIBT及IMO船舶認證</p>
-                </header>
-                <article>
-                    <div class="elementToFadeIn" id="iconGroup">
-                        <img src="./img/brandimage/iconaplus.svg" alt="icon_aplus">
-                        <img src="./img/brandimage/icon_dibt.svg" alt="icon_dibt">
-                        <img src="./img/brandimage/icon_astm.svg" alt="icon_astm">
-                        <img src="./img/brandimage/icon_ce.svg" alt="icon_ce">
-                        <img src="./img/brandimage/icon_floorscore.svg" alt="icon_floorscore">
-                    </div>
-                </article>
-            </div>
-        </div>
-    </div> -->
     <section class="parallax">
         <div id="homeIntroIcons">
             <header class="introTxt elementToFadeIn">
@@ -130,65 +87,16 @@
             </article>
         </div>
     </section>
-    <!-- <section class="makeEffects">helloworld</section> -->
-
-    <!-- <main class="wrapperParallax "> -->
-    <!--<div style="border:5px solid gold"><img style="width:100vw" src="./img/brandimage/brandimage_c_t.jpg"></div>-->
     <div id="fixedIcons">
         <div>
             <a href="https://shopee.tw/rococo.taiwan" target="_blank">
                 <img id="getFreeSample" src="./img/icon_freesample.png" onmouseover="this.src='./img/icon_freesample_hover.png'" onmouseout="this.src='./img/icon_freesample.png'"> 
-                <!-- <div id="getFreeSample"></div> -->
             </a>
         </div>
         <div>
-            <!--<img id="goTop" src="./img/icon_top.png">-->
             <div id="goTop">TOP</div>
         </div>
     </div>
-    <!-- <section id="home">
-       <div class="parallax bg1">
-            <div id="homeIntroIcons">
-                <header class="introTxt elementToFadeIn">
-                    <h1>ECOLOGICAL FLOORING</h1>
-                    <p class="homeIntrop">產品原料安全環保，對人體及環境無毒無害，永續生態。</p>
-                    <p class="homeIntrop">通過美國ASTM，歐盟CE，美國FloorScore，德國DIBT及IMO船舶認證</p>
-                </header>
-                <article>
-                    <div class="elementToFadeIn" id="iconGroup">
-                        <img src="./img/brandimage/icon_aplus.svg" alt="icon_aplus">
-                        <img src="./img/brandimage/icon_dibt.svg" alt="icon_dibt">
-                        <img src="./img/brandimage/icon_astm.svg" alt="icon_astm">
-                        <img src="./img/brandimage/icon_ce.svg" alt="icon_ce">
-                        <img src="./img/brandimage/icon_floorscore.svg" alt="icon_floorscore">
-                    </div>
-                </article>
-            </div>
-            <div class="makeEffect"> -->
-    <!-- <div class="wrapper" id="features" style="background:#fff;margin-top:150px">
-                    <header class="sectionTitle">
-                        <span>|</span>
-                        <span>特</span>
-                        <span>色</span>
-                        <span>|</span>
-                    </header>
-                    <article class="fBlock" id="f1">
-                        <div class="fContent">
-                            <div class="fIconTitle">
-                                <img class="fIcon" src="features/icon_safety.svg" alt="icon_safety">
-                                <h3>安全環保</h3>
-                            </div>
-                            <p class="pContainer">產品所有用料安全環保，對人體環境無毒無害，不含放射性元素，不含甲醛。 通過美國ASTM、歐盟CE、美國FloorScore、德國DIBT及IMO船舶認證。
-                            </p>
-                        </div>
-                        <div class="fImg">
-                            <img src="features/feature_safety.jpg" alt="feature_safety">
-                        </div>
-                    </article>
-                </div> 
-    </div>
-    </div>
-    </section>-->
     <section id="features">
         <div class="wrapper">
             <header class="sectionTitle">
@@ -844,12 +752,7 @@
                 console.log("scroll", $(window).scrollTop(), $(document).scrollTop());
             })
 
-            // $("#getFreeSample").hover(function () {
-            //     console.log("getfreesample");
-            //     $(this).attr("src", "./img/icon_freesample_hover.png")
-            // })
-
-            /* parallax */
+            /* parallax ref:https://www.devstreak.com/parallax-scrolling-effect-with-pure-javascript/*/
             var parallax = document.querySelector(".parallax");
             window.addEventListener("scroll", function () {
                 var scrolledHeight = window.pageYOffset,
