@@ -419,30 +419,39 @@
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="elm" src="./img/wood/material_elm.jpg ">
+                <span class="hoverTxt">黃榆</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="fir" src="./img/wood/material_fir.jpg ">
+                <span class="hoverTxt">雲杉</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="maple" src="./img/wood/material_maple.jpg ">
+                <span class="hoverTxt">楓木</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="oak" src="./img/wood/material_oak.jpg">
+                <span class="hoverTxt">古橡</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="olive" src="./img/wood/material_olive.jpg">
+                <span class="hoverTxt">橄欖木</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="paulownia" src="./img/wood/material_paulownia.jpg">
+                <span class="hoverTxt">深桐</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="pine" src="./img/wood/material_pine.jpg">
+                <span class="hoverTxt">雪松</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="robinia" img src="./img/wood/material_robinia.jpg">
+                <span class="hoverTxt">洋槐</span>
             </div>
             <div class="woodSet_m">
                 <img class="woodImg_m" id="teak" img src="./img/wood/material_teak.jpg">
+                <span class="hoverTxt">櫻桃木</span>
             </div>
         </section>
         <section class="regular slider">
@@ -471,7 +480,7 @@
             </div>
             <div class="woodSet" id="elm">
                 <img src="./img/wood/material_elm.jpg">
-                <span class="hoverTxt">黃榆</span>
+                <span class="hoverTxt">紅柚</span>
             </div>
             <div class="woodSet" id="fir">
                 <img src="./img/wood/material_fir.jpg">
@@ -756,7 +765,7 @@
             /***** slick slider control *****/
             $(".regular").slick({
                 dots: true,
-                infinite: true,
+                infinite: false,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: false
@@ -770,7 +779,7 @@
             $(".woodSlider").slick({
                 dots: true,
                 infinite: false,
-                // centerMode: true,
+                //centerMode: true,
                 slidesToShow: 3,
                 slidesToScroll: 1
             });
@@ -822,10 +831,10 @@
                 var id = $(this).attr('id');
                 console.log("===.woodSet_m===", id);
                 var kitchen_url = "./img/wood/kitchen_" + id + ".jpg";
-                var living_room_url = "./img/wood/living_room_" + id + ".jpg";
+                var parlor_url = "./img/wood/parlor_" + id + ".jpg";
                 var room_url = "./img/wood/room_" + id + ".jpg";
                 $(".regular.slider #s_kitchen").attr("src", kitchen_url);
-                $(".regular.slider #s_living_room").attr("src", living_room_url);
+                $(".regular.slider #s_parlor").attr("src", parlor_url);
                 $(".regular.slider #s_room").attr("src", room_url);
                 $('.regular').slick('slickPause');
             })
@@ -886,6 +895,8 @@
                 var window_height = $(window).height();
                 var height = $(window).scrollTop();
                 console.log("fixediconsinview", window_height, height);
+                //var checkMenuOpen = $("#hamburger").hasClass("open");
+                //console.log("checkMenuOpen", checkMenuOpen);
                 if ($(document).scrollTop() > window_height) {
                     $("#fixedIcons").addClass("show");
                 } else {
@@ -912,6 +923,28 @@
                     parallax.style.backgroundPositionY = "0";
                 }
             });
+
+            function preloader() {
+                var images = new Array();
+                function preload() {
+                    for (i = 0; i < preload.arguments.length; i++) {
+                        images[i] = new Image()
+                        images[i].src = preload.arguments[i]
+                    }
+                }
+
+                var i, urls = [];
+                var woodName = ['birch', 'cherry', 'elm', 'fir', 'maple', 'oak', 'olive', 'paulownia', 'pine', 'robinia', 'teak'];
+                woodName.map(function (ele, i) {
+                    urls.push('./img/wood/kitchen_' + ele + '.jpg');
+                    urls.push('./img/wood/room_' + ele + '.jpg');
+                    urls.push('./img/wood/parlor_' + ele + '.jpg');
+                    console.log("urls", ele, urls);
+                });
+                preload.apply(null, urls);
+            }
+
+            preloader();
         });
     </script>
 </body>
