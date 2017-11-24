@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
     font-family: 'Bentham', serif;
-    overflow-x:hidden;
+    /* overflow-x:hidden;  */
 }
 
 p{
@@ -24,12 +24,6 @@ p{
     margin-top: 70vh;
 }
 
-.makeEffects {
-    height: 1000px;
-    border: 1px solid orange;
-    width: 100vw;
-}
-
 #nav {
     background: #B39559;
     width: 100vw;
@@ -43,10 +37,6 @@ p{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-end;
-}
-
-.hamburger ,.menuClose{
-    visibility: hidden;
 }
 
 .pullLeft {
@@ -75,9 +65,8 @@ p{
 }
 
 #nav #logo{
-    width:145px;
+    width:165px;
     padding-left:50px;
-    padding-top:2px;
 }
 
 #nav .lastLi{
@@ -96,15 +85,17 @@ p{
 
 #nav ul#openHamburger{
     height: 100vh;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
 }
   
-  #hamburger {
-    /* width: 60px;
-    height: 45px; */
+#hamburger {
     width:40px;
     height:25px;
     position: relative;
-    /* margin: 50px auto; */
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -115,12 +106,11 @@ p{
     transition: .5s ease-in-out;
     cursor: pointer;
     display:none;
-  }
+}
   
-  #hamburger span {
+#hamburger span {
     display: block;
     position: absolute;
-    /* height: 9px; */
     height:5px;
     width: 100%;
     background: #3E311B;
@@ -135,57 +125,54 @@ p{
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
-  }
+}
 
-  #hamburger span:nth-child(1) {
+#hamburger span:nth-child(1) {
     top: 0px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
-  }
+}
   
-  #hamburger span:nth-child(2) {
-    /* top: 18px; */
+#hamburger span:nth-child(2) {
     top:12px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
-  }
+}
   
-  #hamburger span:nth-child(3) {
-    /* top: 36px; */
+#hamburger span:nth-child(3) {
     top:24px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
     transform-origin: left center;
-  }
+}
   
-  #hamburger.open span:nth-child(1) {
+#hamburger.open span:nth-child(1) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
-    /* top: -3px; */
     top:0px;
     left: 8px;
-  }
+}
   
-  #hamburger.open span:nth-child(2) {
+#hamburger.open span:nth-child(2) {
     width: 0%;
     opacity: 0;
-  }
+}
   
-  #hamburger.open span:nth-child(3) {
+#hamburger.open span:nth-child(3) {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
     top: 29px;
     left: 8px;
-  }
+}
 
 
 #fixedIcons{
@@ -268,11 +255,10 @@ p{
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateZ(-1px) scale(1.5);
+    transform: translateZ(-1px) scale(1);
     background-size: cover;
     background-repeat:no-repeat;
     z-index: -1;
-    /* border:2px solid green; */
 }
 
 .elementToFadeIn {
@@ -695,7 +681,7 @@ p{
 
 #spec #size img{
     width:75vw;
-    margin-left:25vw;
+    margin-left:calc(25vw - 15px);
 }
 
 #spec #size img.in-view{
@@ -941,9 +927,6 @@ footer{
 }
 
 @media screen and (max-width: 480px) {
-    /* .wrapperParallax{
-        overflow-x: auto;
-    } */
     #nav #logo{
         padding:0;
         /* border:1px solid pink; */
@@ -953,6 +936,7 @@ footer{
 
     #hamburger{
         display:block;
+        border:1px solid pink;
     }
 
     #nav{
@@ -962,6 +946,7 @@ footer{
         text-align: center;
         position: fixed;
     }
+
 
     #nav ul{
         overflow: hidden;
@@ -980,30 +965,9 @@ footer{
         margin-left:20px;
     }
 
-    .hamburger, .menuClose{
-        color:#3E311B;
-    }
-
-    .hamburger {
-        visibility: visible;
-    }
-
     .parallax #homeIntroIcons{
         flex-flow:column wrap;
         /* border:1px solid red; */
-    }
-
-    #nav .logo{
-        width:165px;
-        padding:0;
-    }
-
-    .hamburger {
-        font-size:25px;
-    }
-
-    .pullLeft{
-        margin-right:0;
     }
 
     #nav ul{
@@ -1206,7 +1170,7 @@ footer{
          left:-5px;
      }
      .slick-prev:before{
-         margin-left:-5px;
+         margin-left:5px;
      }
 
      .slick-next{
@@ -1215,6 +1179,10 @@ footer{
 
      .slick-next{
         margin-right:25px;
+    }
+    
+    .slick-next:before{
+        margin-right:-5px;
     }
 
     .slick-prev, .slick-next{

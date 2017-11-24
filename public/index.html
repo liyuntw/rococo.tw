@@ -48,16 +48,12 @@
 <body>
     <nav id="nav">
         <div class="pullLeft logoCon">
-            <!-- <i class="fa fa-bars hamburger" aria-hidden="true"></i> -->
             <div id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <img id="logo" src="./img/brandimage/logo_20171123.svg" alt="logo">
-            <!-- <span class="menuClose">
-                <i class="fa fa-times" aria-hidden="true"></i>
-            </span> -->
         </div>
         <ul>
             <li>
@@ -522,7 +518,7 @@
             <span class="subIntro">耐磨層0.3mm</span>
         </header>
         <p style="padding-left:60px;margin:0">兼顧大器空間感及實用性</p>
-        <div id="size">
+        <div id="size" style="position:relative">
             <img src="./img/spec/spec_01_c.jpg" class="animation-element">
         </div>
         <article id="structure">
@@ -734,19 +730,28 @@
                     console.log("click x");
                     $("#nav ul").removeAttr("id");
                     $("#hamburger").removeClass("open");
-                    //$("#nav").css("height", "70px");
+                    $("#fixedIcons").addClass("show");
+                    $("body").css("overflow", "auto");
                 } else {
                     // even clicks
                     console.log("#hamburger even clicks");
-                    //$("#nav").css("height", "100vh");
                     $("#nav ul").css("display", "block");
                     $("#nav ul").attr("id", "openHamburger");
                     $("#hamburger").addClass("open");
-
+                    $("#fixedIcons").removeClass("show");
+                    $("body").css("overflow", "hidden");
                 }
                 $(this).data("clicks", !clicks);
 
+                $("#nav ul li").click(function () {
+                    $("#nav ul").removeAttr("id");
+                    $("#hamburger").removeClass("open");
+                    $("#fixedIcons").addClass("show");
+                    $("body").css("overflow", "auto");
+                })
             })
+
+
 
             /***** slick slider control *****/
             $(".regular").slick({
