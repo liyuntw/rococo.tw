@@ -2,7 +2,7 @@ body{
     margin:0;
     padding:0;
     font-family: "Bentham","Microsoft JhengHei","SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica", "serif";
-    /* overflow-x:hidden;  */
+    overflow-x:hidden; 
 }
 
 p{
@@ -556,8 +556,7 @@ p{
 }
 
 #spec #size img{
-    width:75vw;
-    margin-left:calc(25vw - 15px);
+    width:100vw;
 }
 
 #spec #size img.in-view{
