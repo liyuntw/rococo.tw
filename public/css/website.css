@@ -972,9 +972,9 @@ footer{
         /* border:1px solid lightgreen; */
     }
 
-    .introTxt p:nth-child(2){
+    /* .introTxt p:nth-child(2){
         margin-top:50px;
-    }
+    } */
 
     #iconGroup{
         margin:0 auto;
@@ -989,7 +989,12 @@ footer{
         flex-flow: column;
         justify-content: space-around;
         align-items: center;
-        padding:20px 0px;
+        padding:35px 0px;
+    }
+
+    .fBlock#f5>div,
+    .fBlock#f6>div{
+        margin-top:25px;
     }
 
     .fBlock#f2, 
@@ -1001,6 +1006,14 @@ footer{
     .fBlock#f6{
         margin:0;
         flex-flow: column;
+    }
+
+    .fBlock#f5{
+        margin-top:-50px;
+    }
+
+    .fBlock#f6{
+        margin-top:-65px;
     }
 
     .fIconTitle{
