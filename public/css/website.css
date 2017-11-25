@@ -9,20 +9,6 @@ p{
     color:#444444;
 }
 
-.parallax {
-    background-image: url("../img/brandimage/brandimage_c_t.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    z-index: 1999;
-}
-
-.parallax h1 {
-    text-align: left;
-    font-size: 35px;
-    color: white;
-    margin-top: 70vh;
-}
 
 #nav {
     background: #B39559;
@@ -74,6 +60,53 @@ p{
     padding-right:30px;
 }
 
+#loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index:-2;
+}
+
+.loading-bar {
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    border-radius: 4px;
+    animation: loading 1s ease-in-out infinite;
+}
+
+.loading-bar:nth-child(1) {
+    background-color: #171f2a;
+    animation-delay: 0;
+}
+
+.loading-bar:nth-child(2) {
+    background-color: #B39559;
+    animation-delay: 0.09s;
+}
+
+.loading-bar:nth-child(3) {
+    background-color: #171f2a;
+    animation-delay: .18s;
+}
+
+.loading-bar:nth-child(4) {
+    background-color: #B39559;
+    animation-delay: .27s;
+}
+
+@keyframes loading {
+    0% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1, 2.2);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
 #fixedIcons{
     display:none;
 }
@@ -111,6 +144,21 @@ p{
     color:#B39559;
 }
 
+.parallax {
+    background-image: url("../img/brandimage/brandimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 1999;
+}
+
+.parallax h1 {
+    text-align: left;
+    font-size: 35px;
+    color: white;
+    margin-top: 70vh;
+}
+
 #home {
     position: relative;
     height: 100vh;
@@ -139,6 +187,8 @@ p{
 .introTxt p{
     font-size:16px;
 }
+
+
 
 .parallax #homeIntroIcons{
     display: flex;
@@ -877,6 +927,7 @@ footer{
         cursor: pointer;
         margin-right:auto;
         margin-left:20px;
+        border:1px solid green;
     }
       
     #hamburger span {
@@ -1306,52 +1357,6 @@ footer{
     }
 }
 
-.loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index:-2;
-}
-
-.loading-bar {
-    display: inline-block;
-    width: 4px;
-    height: 18px;
-    border-radius: 4px;
-    animation: loading 1s ease-in-out infinite;
-}
-
-.loading-bar:nth-child(1) {
-    background-color: #171f2a;
-    animation-delay: 0;
-}
-
-.loading-bar:nth-child(2) {
-    background-color: #B39559;
-    animation-delay: 0.09s;
-}
-
-.loading-bar:nth-child(3) {
-    background-color: #171f2a;
-    animation-delay: .18s;
-}
-
-.loading-bar:nth-child(4) {
-    background-color: #B39559;
-    animation-delay: .27s;
-}
-
-@keyframes loading {
-    0% {
-        transform: scale(1);
-    }
-    20% {
-        transform: scale(1, 2.2);
-    }
-    40% {
-        transform: scale(1);
-    }
-}
 
 
 .sliderDiv.hidden img{
