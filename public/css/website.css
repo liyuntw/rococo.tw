@@ -300,7 +300,7 @@ p{
 .fIntro{
     height:160px;
     /* border:1px solid coral; */
-    width:200px;
+    width:220px;
     text-align: center;
 }
 
@@ -363,17 +363,7 @@ p{
 
 #compare{
     height:700px;
-    /* padding:50px 0px; */
-    padding-bottom:30px;
-    padding-bottom:120px;
-}
-
-#compare #collapseTable {
-    width:100%;
-    margin:0 auto; 
-    display:block;
-    overflow:hidden;
-    /* border:1px solid pink; */
+    padding-bottom:80px;
 }
 
 #compare th:first-child{
@@ -444,7 +434,8 @@ p{
     width:45px;
 }
 
-#compare tbody tr td:nth-child(2) span{
+#compare tbody tr td:nth-child(2) span,
+#compare span.addHightlight{
     background: rgba(255,255,255,0.3);
 }
 
@@ -462,6 +453,8 @@ p{
     /* border:1px solid pink; */
     width:80vw;
     margin:0 auto;
+    display:block;
+    overflow:hidden;
 }
   
 #compare #collapseTable.in-view  {
@@ -556,7 +549,7 @@ p{
 }
 
 #spec #size img{
-    width:100vw;
+    width:99vw;
 }
 
 #spec #size img.in-view{
@@ -564,12 +557,14 @@ p{
     animation: fadeinLittle 1s linear;
 }
 
-#spec #structure img{
+#spec #structure img#pcStructureImg,
+#spec #structure img#mStructureImg{
     width:40vw;
     margin-bottom:30px;
     /* border:1px solid blue; */
 }
 
+#wood .subIntro,
 #spec .subIntro, 
 #install .subIntro {
     font-size: 16px;
@@ -603,13 +598,15 @@ p{
     border-bottom: 1px solid #B39559;
     width:155px;
     margin-bottom: 30px;
+    margin-left:30px;
 }
 
 #strutureIntro header span{
     padding:5px;
 }
 
-#strutureIntro ul .mLabel{
+#strutureIntro ul .mLabel, 
+#strutureIntro ul .mMaterial{
     display: none;
 }
 
@@ -760,6 +757,7 @@ p{
 #combinationCon>div>p{
     text-align: center;
     margin:0;
+    padding-bottom: 15px;
 }
 
 #combinationIntro{
@@ -1184,6 +1182,49 @@ footer{
     #spec #structure img#mStructureImg{
         display:block;
         width:50vw;
+    }
+
+    #strutureIntro{
+        padding-bottom: 50px;
+    }
+
+    #strutureIntro ul{
+        padding:0;
+    }
+
+    #strutureIntro ul li{
+        list-style-type: none;
+    }
+
+    #strutureIntro ul .mLabel {
+        display: inline-block;
+        padding:10px 0;
+    }
+
+    #strutureIntro ul .mLabel, 
+    #strutureIntro ul .mMaterial{
+        display: inline-block;
+    }
+
+    #strutureIntro ul .materialIntro{
+       position: relative;
+       margin:10px 0;
+       /* border:1px solid green; */
+    }
+
+    .materialIntro .mMaterial{
+        position: absolute;
+        top:0px;
+        width:15px;
+        height:85px;
+    }
+
+    .materialTxt{
+        margin-left:25px;
+    }
+
+    #strutureIntro ul .mLabel.oneLine{
+        padding-top:20px;
     }
 
     #strutureIntro li{
