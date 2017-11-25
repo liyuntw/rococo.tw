@@ -8,7 +8,7 @@ $(document).ready(function () {
             console.log("click x");
             $("#nav ul").removeAttr("id");
             $("#hamburger").removeClass("open");
-            $("#fixedIcons").addClass("show");
+            //$("#fixedIcons").addClass("show");
             $("body").css("overflow", "auto");
         } else {
             // even clicks
@@ -16,7 +16,7 @@ $(document).ready(function () {
             $("#nav ul").css("display", "block");
             $("#nav ul").attr("id", "openHamburger");
             $("#hamburger").addClass("open");
-            $("#fixedIcons").removeClass("show");
+            //$("#fixedIcons").removeClass("show");
             $("body").css("overflow", "hidden");
         }
         $(this).data("clicks", !clicks);
@@ -24,7 +24,7 @@ $(document).ready(function () {
         $("#nav ul li").click(function () {
             $("#nav ul").removeAttr("id");
             $("#hamburger").removeClass("open");
-            $("#fixedIcons").addClass("show");
+            //$("#fixedIcons").addClass("show");
             $("body").css("overflow", "auto");
         })
     })
@@ -37,7 +37,7 @@ $(document).ready(function () {
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: false
+        autoplay: true
     });
     if (screen.width > 480) {
         $(".woodSlider").css("display", "none");
@@ -58,40 +58,40 @@ $(document).ready(function () {
         var id = $(this).attr('id');
         console.log("woodset id", id);
         var kitchen_url = "./img/wood/kitchen_" + id + ".jpg";
-        var living_room_url = "./img/wood/living_room_" + id + ".jpg";
+        var parlor_url = "./img/wood/parlor_" + id + ".jpg";
         var room_url = "./img/wood/room_" + id + ".jpg";
         console.log("kitchen_url", kitchen_url);
-        // $(".regular.slider #s_kitchen").attr("src", kitchen_url);
-        // $(".regular.slider #s_living_room").attr("src", living_room_url);
-        // $(".regular.slider #s_room").attr("src", room_url);
+        $(".regular.slider #s_kitchen").attr("src", kitchen_url);
+        $(".regular.slider #s_parlor").attr("src", parlor_url);
+        $(".regular.slider #s_room").attr("src", room_url);
 
         /* ref:https://stackoverflow.com/questions/18101673/jquery-get-all-src-of-images-in-div-and-put-into-field*/
-        var imagesURL = $('.sliderDiv').children('img').map(function () {
-            return $(this).attr('src')
-        }).get();
-        var replaceImgURL = imagesURL.map(function (el) {
-            var materialURL;
-            if (el.match("room")) {
-                console.log("match,room", el);
-                materialURL = el.substring(0, 16) + id + ".jpg";
-                return materialURL;
-            } else if (el.match("parlor")) {
-                console.log("match parlar", el);
-                materialURL = el.substring(0, 18) + id + ".jpg";
-                return materialURL;
-            } else if (el.match("kitchen")) {
-                console.log("match kitche", el);
-                materialURL = el.substring(0, 19) + id + ".jpg";
-                return materialURL;
-            } else {
-                console.log("no found");
-            }
-        })
-        console.log("img urls", imagesURL, replaceImgURL);
-        $('.sliderDiv').children('img').map(function (idx) {
-            console.log(idx, replaceImgURL[idx]);
-            $(this).attr("src", replaceImgURL[idx]);
-        }).get();
+        // var imagesURL = $('.sliderDiv').children('img').map(function () {
+        //     return $(this).attr('src')
+        // }).get();
+        // var replaceImgURL = imagesURL.map(function (el) {
+        //     var materialURL;
+        //     if (el.match("room")) {
+        //         console.log("match,room", el);
+        //         materialURL = el.substring(0, 16) + id + ".jpg";
+        //         return materialURL;
+        //     } else if (el.match("parlor")) {
+        //         console.log("match parlar", el);
+        //         materialURL = el.substring(0, 18) + id + ".jpg";
+        //         return materialURL;
+        //     } else if (el.match("kitchen")) {
+        //         console.log("match kitche", el);
+        //         materialURL = el.substring(0, 19) + id + ".jpg";
+        //         return materialURL;
+        //     } else {
+        //         console.log("no found");
+        //     }
+        // })
+        // console.log("img urls", imagesURL, replaceImgURL);
+        // $('.sliderDiv').children('img').map(function (idx) {
+        //     console.log(idx, replaceImgURL[idx]);
+        //     $(this).attr("src", replaceImgURL[idx]);
+        // }).get();
         $('.regular').slick('slickPause');
     })
 
@@ -202,7 +202,7 @@ $(document).ready(function () {
             }
         }
 
-        var i, urls = [];
+        var urls = [];
         var woodName = ['birch', 'cherry', 'elm', 'fir', 'maple', 'oak', 'olive', 'paulownia', 'pine', 'robinia', 'teak'];
         woodName.map(function (ele, i) {
             urls.push('./img/wood/kitchen_' + ele + '.jpg');
